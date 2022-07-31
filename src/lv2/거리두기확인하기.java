@@ -2,14 +2,14 @@ package lv2;
 
 public class 거리두기확인하기 {
     public static void main(String[] args) {
-       String [][] arr = {
-               {"POOOP", "OXXOX", "OPXPX", "OOXOX", "POXXP"},
-               {"POOPX", "OXPXP", "PXXXO", "OXXXO", "OOOPP"},
-               {"PXOPX", "OXOXP", "OXPOX", "OXXOP", "PXPOX"},
-               {"OOOXX", "XOOOX", "OOOXX", "OXOOX", "OOOOO"},
-               {"PXPXP", "XPXPX", "PXPXP", "XPXPX", "PXPXP"}
-       };
-       solution(arr);
+        String[][] arr = {
+                {"POOOP", "OXXOX", "OPXPX", "OOXOX", "POXXP"},
+                {"POOPX", "OXPXP", "PXXXO", "OXXXO", "OOOPP"},
+                {"PXOPX", "OXOXP", "OXPOX", "OXXOP", "PXPOX"},
+                {"OOOXX", "XOOOX", "OOOXX", "OXOOX", "OOOOO"},
+                {"PXPXP", "XPXPX", "PXPXP", "XPXPX", "PXPXP"}
+        };
+        solution(arr);
     }
 
     public static int[] solution(String[][] places) {
@@ -38,25 +38,23 @@ public class 거리두기확인하기 {
                 if (arr[i][j].equals("O")) {
                     int cnt = 0;
                     for (int k = 0; k < dx.length; k++) {
-                        if (i + dx[k] >= 0 && j + dy[k] >=0 && i + dx[k] < 5 && j + dy[k] < 5) {
-                            if(arr[i + dx[k]][j + dy[k]].equals("P")) cnt++;
+                        if (i + dx[k] >= 0 && j + dy[k] >= 0 && i + dx[k] < 5 && j + dy[k] < 5) {
+                            if (arr[i + dx[k]][j + dy[k]].equals("P")) cnt++;
+                            if (cnt >= 2) return 0;
                         }
                     }
-
-                    if (cnt >= 2) return 0;
                 }
 
                 // 2. 만약에 i, j가 p인 경우
                 if (arr[i][j].equals("P")) {
                     for (int k = 0; k < dx.length; k++) {
-                        if (i + dx[k] >= 0 && j + dy[k] >=0 && i + dx[k] < 5 && j + dy[k] < 5) {
-                            if(arr[i + dx[k]][j + dy[k]].equals("P"))return 0;
+                        if (i + dx[k] >= 0 && j + dy[k] >= 0 && i + dx[k] < 5 && j + dy[k] < 5) {
+                            if (arr[i + dx[k]][j + dy[k]].equals("P")) return 0;
                         }
                     }
                 }
             }
         }
-
         return 1;
     }
 }
