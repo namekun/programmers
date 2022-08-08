@@ -35,7 +35,7 @@ public class 게임맵최단거리 {
         boolean[][] visit = new boolean[n][m];
         int answer = Integer.MAX_VALUE;
 
-        Queue<Pos> q = new LinkedList<Pos>();
+        Queue<Pos> q = new LinkedList<>();
         q.add(new Pos(0,0,1));
         while(!q.isEmpty()) {
             Pos temp = q.poll();
