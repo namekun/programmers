@@ -1,9 +1,9 @@
 package lv1;
 
-import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Arrays;
 
-class 모의고사{
+class 모의고사 {
 	// 1번 : 1, 2, 3, 4, 5 의 반복
 // 2번 : 2, 1, 2, 3, 2, 4, 2, 5 의 반복
 // 3번 : 3, 3, 1, 1, 2, 2, 4, 4, 5, 5 의 반복
