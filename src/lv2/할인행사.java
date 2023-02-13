@@ -39,7 +39,6 @@ public class 할인행사 {
             }
         }
 
-
         return answer;
     }
 }
