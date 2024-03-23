@@ -65,7 +65,7 @@ public class 과제진행하기 {
                 }
             }
         }
-        return answer.toArray(String[]::new);
+        return answer.toArray(new String[answer.size()]);
     }
 }
 
