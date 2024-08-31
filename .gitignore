@@ -1,2 +1,11 @@
 # 프로젝트 제외 경로
 /out/
+.idea/misc.xml
+
+.idea/modules.xml
+
+.idea/vcs.xml
+
+.idea/workspace.xml
+
+codingTest.iml
